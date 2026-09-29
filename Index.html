@@ -1,0 +1,442 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حوار مع صديقي الملحد - ملخص شامل وموسوعة الردود العقدية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        islamic: {
+                            dark: '#070d1d',
+                            card: '#0f172a',
+                            border: '#334155',
+                            gold: '#d4af37',
+                            goldLight: '#f3e5ab',
+                            accent: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        amiri: ['Amiri', 'serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #070d1d;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .amiri-font {
+            font-family: 'Amiri', serif;
+        }
+        .islamic-bg {
+            background-image: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.07) 0%, transparent 70%),
+                              linear-gradient(to bottom, #070d1d, #0b132b);
+        }
+        .card-glow {
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-glow:hover {
+            box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+    </style>
+</head>
+<body class="islamic-bg min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black">
+
+    <header class="w-full bg-slate-900/90 backdrop-blur-md border-b border-amber-500/20 sticky top-0 z-50 py-4 px-4 sm:px-8 shadow-xl">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/40 flex items-center justify-center text-amber-400 font-bold text-2xl shadow-inner">
+                    ✨
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-black text-amber-300 amiri-font">حوار مع صديقي الملحد</h1>
+                    <p class="text-xs text-slate-400 font-medium">للكاتب الفيلسوف د. مصطفى محمود • موسوعة الردود العقدية</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-2">
+                <div class="relative">
+                    <input type="text" id="searchInput" oninput="filterContent()" placeholder="ابحث في الشبهات والمواضيع..." class="px-3.5 py-2 text-xs sm:text-sm bg-slate-800/80 border border-slate-700 rounded-xl text-slate-200 placeholder-slate-400 focus:outline-none focus:border-amber-500 transition-all w-48 sm:w-64">
+                </div>
+                <button onclick="expandAll()" class="px-3 py-2 text-xs font-bold bg-slate-800 hover:bg-slate-700 text-amber-300 rounded-xl border border-amber-500/30 transition-all shadow-sm">فتح الكل</button>
+                <button onclick="collapseAll()" class="px-3 py-2 text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl border border-slate-700 transition-all shadow-sm">طوي الكل</button>
+                <button onclick="window.print()" class="px-3.5 py-2 text-xs font-bold bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-slate-950 rounded-xl shadow-lg transition-all flex items-center gap-1.5 font-tajawal">
+                    <span>🖨️</span> طباعة / حفظ PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto w-full p-4 sm:p-6 md:p-8 flex-grow space-y-8">
+        
+        <!-- Book Intro Banner -->
+        <div class="bg-gradient-to-br from-slate-900 via-slate-900/90 to-slate-800 border border-amber-500/30 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-56 h-56 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-16 -bottom-16 w-56 h-56 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="relative z-10 space-y-4">
+                <span class="inline-block px-3.5 py-1 text-xs font-bold bg-amber-500/15 text-amber-300 rounded-full border border-amber-500/30 amiri-font">مقدمة الكتاب والمنظور الفكري</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-amber-200 amiri-font leading-tight">بضاعة الإلحاد وفلسفة الإنكار في العصر الحديث</h2>
+                <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4 text-justify">
+                    <p>
+                        لأننا لا نرى الله، ولأننا لا نعرف المستقبل، ولأن الآخرة غيب، ولأن مَن يذهب إلى القبر لا يعود؛ انتشرت بضاعة الإلحاد، وسادت الأفكار المادية، وعَبَد الناس أنفسهم واستسلموا لشهواتهم، وتقاتلوا على منافع الدنيا، وظن أكثرهم أنه ليس وراء الدنيا شيء، وليس بَعد الحياة شيء، وتقاتلت الدول الكبرى على ذَهَبِ الأرض وخيراتها، وأصبح للكفر نظریات، كما أصبح للمادية فلسفات، وللإنكار محارِبين، وللمنکِرین کعبة يتعلقون بها، ويَحُجُّون إليها في ذهابهم وإيابهم، کعبة يسمونها: <span class="text-amber-300 font-bold">(العِلم)</span>.
+                    </p>
+                    <p>
+                        وعاد الحوار مع صديقي الملحد مرة أخرى، وعادت موضوعاته عن الجبرية والاختيار، والبعث، والمصير، والحساب؛ لتصبِح مواضيع الساعة، وتَعُود هذه الطبعة الجديدة في وقتها وميعادها؛ لتشارِك في حل هذا اللغز، وتَعُود لتفسِّر الموضوع من منطلق العلم الثابت والإشارات القرآنية، والإيمان بالله.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-6" id="topicsContainer">
+
+            <!-- Topic 1 -->
+            <div class="topic-card bg-slate-900/90 border border-amber-500/20 rounded-2xl overflow-hidden card-glow" data-keywords="من خلق الله السببية الخالق مخلوق سورة الإخلاص شكسبير صدفة">
+                <button onclick="toggleSection('topic-1')" class="w-full text-right p-5 sm:p-6 flex justify-between items-center bg-slate-800/60 hover:bg-slate-800 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 font-black flex items-center justify-center text-sm shadow-inner">٠١</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-amber-200 amiri-font">مَنْ خَلَقَ الله؟</h3>
+                    </div>
+                    <span id="icon-topic-1" class="text-amber-400 font-bold transform transition-transform duration-300">▼</span>
+                </button>
+                <div id="content-topic-1" class="p-6 sm:p-8 space-y-6 border-t border-slate-800 text-slate-200 leading-loose text-base sm:text-lg">
+                    <div class="bg-red-950/20 border-r-4 border-red-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-red-300 mb-2">شبهة الملحدين:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">يَسْخَر الملحدون ويُرَدِّدون: أنتم تقولون إن الله موجود، ودليلكم هو قانون السببية، الذي يَنص على أنَّ لكل صنعة صانع، ولكل خَلْق خالق، والرسم يدل على الرسَّام، والنقش يدل على النقَّاش، والكون بهذا المنطق أبلغ دليل على الإله القدير الذي خَلَقه، ونحن صَدَّقْنا وآمَنَّا بهذا الخالق، لكن ألا يحق لنا بنفس المنطق أن نَسأل: مَن خَلَق الخالق؟ ومَن خَلَق الله الذي تحدثوننا عنه؟ ألا يقودنا هذا الكلام إلى قانون السببية؟</p>
+                    </div>
+
+                    <div class="bg-emerald-950/20 border-r-4 border-emerald-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-emerald-300 mb-2">الرد العقدي والعلمي:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">نحن نقول له: سؤالك فاسد؛ فأنت تقول بأن الله خالق، ثم تقول مَن خَلَقه! فقد جعلتَ الله خالقًا ومخلوقًا في نفس الجملة، وهذا تناقض، والوجه الآخر لفساد السؤال: أنك تتصور أن الخالق خاضع لقوانين مخلوقاته؛ فالخالق وضع لنا قانون السببية، وهو الذي خلق الزمان والمكان، ولا يمكن أن نتصور أن الله خاضع لقانون السببية ولا لقوانين الزمان والمكان التي وضعها.</p>
+                    </div>
+
+                    <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 space-y-4">
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            الله هو الدليل الذي لا يحتاج إلى دليل؛ لأنه الله الحق الواضح بذاته، وهو الحُجَّة على كل شيء، والله ظاهر في النظام والدقة والجمال والإحكام، في ورقة الشجر، وفي ريشة الطاووس، في جناح الفراش، وفي عِطر الورد، في تغريد البلبل، وفي ترابط النجوم والكواكب، وفي هذا النظام الذي اسمه الكون. ولو قلنا إن كل هذا جاء صدفة؛ لكنا مثل الذي يتصور أن الحروف إذا أُلقِيت في الهواء، يمكن أن تتجمع من نفسها، على شَكْل قصيدة شِعر لـ (شكسبير) بدون شاعر وبدون مؤلِّف.
+                        </p>
+                        <div class="p-5 bg-amber-500/10 border border-amber-500/30 rounded-xl text-center space-y-2 shadow-inner">
+                            <p class="text-amber-300 font-bold amiri-font text-lg">
+                                والقرآن يوفر علينا الكلام في هذه المجادلات بكلمات قليلة وبليغة؛ فيقول بوضوح قاطع ودون تفلسف:
+                            </p>
+                            <p class="text-xl sm:text-2xl font-black text-amber-200 amiri-font">
+                                "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 2 -->
+            <div class="topic-card bg-slate-900/90 border border-amber-500/20 rounded-2xl overflow-hidden card-glow" data-keywords="القدر الجبر الاختيار الحساب أفعالي يعلمها الله الحرية">
+                <button onclick="toggleSection('topic-2')" class="w-full text-right p-5 sm:p-6 flex justify-between items-center bg-slate-800/60 hover:bg-slate-800 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 font-black flex items-center justify-center text-sm shadow-inner">٠٢</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-amber-200 amiri-font">إذا كان الله يعلم أفعالي قبل حدوثها وكتبها عليّ؛ فلماذا يحاسبني؟</h3>
+                    </div>
+                    <span id="icon-topic-2" class="text-amber-400 font-bold transform transition-transform duration-300">▼</span>
+                </button>
+                <div id="content-topic-2" class="p-6 sm:p-8 space-y-6 border-t border-slate-800 text-slate-200 leading-loose text-base sm:text-lg">
+                    <div class="bg-red-950/20 border-r-4 border-red-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-red-300 mb-2">شبهة القدر والجبر:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">يثير الملحدون قضية القَدَر دائمًا ويُرَدِّدون: أنتم تقولون إن الله يُجرِي كل شيء في مملكته بقضاء وقَدَر، وإن الله قَدَّر علينا أفعالنا، وإنْ كان هذا هو حالي، وأنَّ أفعالي كلها مكتوبة عنده مسبقاً؛ فلماذا يحاسبني عليها؟ ولا تقولوا لي: نحن مُخيَّرون؛ فليس هناك كذبة أكبر من هذه الكذبة، هل اخترتُ ميلادي وجنسي وطولي وعرضي ولوني ووطني؟ هل تَشرق الشمس ويَغرُب القمر باختياري؟ هل أموت باختياري؟ وهل أقع في المصائب باختياري فلا أجد حلًّا إلا الجريمة؟ لماذا يُجبرني الله على فِعل ثم يحاسبني عليه؟ وإذا قلت إنني حر، وإنَّ لي مشيئة إلى جوار مشيئة الله؛ ألا يكون هذا الكلام إشراكًا بالله ووقوعًا في تعدد المشیئات؟ ثم ما قولك في حُكْم البيئة والظروف في تغيير هذا القدر، وفي الحتميات التي يقول بها الماديون التاريخيون؟</p>
+                    </div>
+
+                    <div class="bg-emerald-950/20 border-r-4 border-emerald-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-emerald-300 mb-2">الرد العقدي والإيماني:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">أقول لهذا الملحد: أنت واقع في عدة مغالطات؛ فأفعالك معلومة عند الله في كتابه، ولكنها ليست مكتوبة عليك بالإكراه، إنها مُقَدَّرة في عِلمه فقط، كما تُقَدِّر أنت بعلمك أن ابنك سوف يزني، ثم يَحدث أن يَزني بالفعل، فهل أجبرتَه؟ أم كان هذا تقديرًا في العِلم؟ وقد أصاب عِلمك.</p>
+                    </div>
+
+                    <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 space-y-4">
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            أما كلامك عن الحرية بأنها كذبة، وقولك بأنك لم تقم باختيار ميلادك ولونك وجنسك وطولك؛ فهو مغالطة أخرى، وسببها هذه المرتكزات: أنك تتصور الحرية بطريقة غير الطريقة التي نتصورها نحن المؤمنين، أنت تتكلم عن حرية مُطْلَقة، حرية التصرف في الكون، وهذه مِلك لله وحده، ونحن لا نؤيد هذه الحرية: <span class="amiri-font text-amber-300 font-bold">"وربك يَخلق ما يشاء ويختار ما كان لهم الخيرة"</span>، وليس من حق أحد أن يختار في مسألة الخلق؛ لأن الله هو الذي يَخلق ما يشاء ويختار، ولن يحاسبك الله على قِصرك، ولن يعاتبك على طولك، ولن يعاقبك لأنك لم تُوقِف الشمس في مدارها.
+                        </p>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            والأشياء التي أمرك الله بها، هي التي سيحاسبك عليها، وأنت في هذا المجال حُرّ، وهذه هي الحدود التي نتكلم فيها، أنت حر في أن تمنع شهوتك، وتقاوِم نفسك، وتَقتُل نيّاتك الشريرة، وتُشجِّع ميولك إلى الخير، أنت تستطيع أن تكون كريمًا وأن تكون بخيلًا، وتستطيع أن تكون صادقًا أو كاذبًا وتستطيع أن تمنع يدك عن المال الحرام، وتستطيع أن تمنع بصرك عن عورات الآخرين، وتستطيع أن تَمْسِك لسانك عن السباب والغيبة والنميمة؛ ففي هذا المجال نحن أحرار، وهذا هو المجال الذي يحاسبنا الله عليه وتتم محاسبتنا.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 3 -->
+            <div class="topic-card bg-slate-900/90 border border-amber-500/20 rounded-2xl overflow-hidden card-glow" data-keywords="الشر المرض الزلازل البراكين الحروب الابتلاء الآلام">
+                <button onclick="toggleSection('topic-3')" class="w-full text-right p-5 sm:p-6 flex justify-between items-center bg-slate-800/60 hover:bg-slate-800 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 font-black flex items-center justify-center text-sm shadow-inner">٠٣</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-amber-200 amiri-font">لماذا خَلَق الله الشر؟</h3>
+                    </div>
+                    <span id="icon-topic-3" class="text-amber-400 font-bold transform transition-transform duration-300">▼</span>
+                </button>
+                <div id="content-topic-3" class="p-6 sm:p-8 space-y-6 border-t border-slate-800 text-slate-200 leading-loose text-base sm:text-lg">
+                    <div class="bg-red-950/20 border-r-4 border-red-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-red-300 mb-2">شبهة وجود الآلام والشرور:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">قال صاحبي الملحد ساخرًا: کیف تَقولون إن إلهكم كامل ورحمن ورحیم وکریم ورءوف، وهو قد خَلق كل هذه الشرور في العالَم؟ مِن المرض والشيخوخة والموت، والزلزال والبركاين، والميكروب والسُّم، وآلام السرطان، التي لا تترك الطفل الصغير ولا الشيخ الكبير، إذا كان الله يشجّع على المحبة والجمال والخير؛ فكيف يَخلق الكراهية والقبح والشر؟</p>
+                    </div>
+
+                    <div class="bg-emerald-950/20 border-r-4 border-emerald-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-emerald-300 mb-2">الرد الواقعي والفلسفي:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">إنَّ النظر المحايِد سوف يكشف لنا أن الخير في الكون هو القاعدة، وأن الشر هو الاستثناء؛ فالصحة هي القاعدة، والمرض استثناء، ونحن نَقضي معظم سنوات عمرنا في صحة، ولا نمرض إلا أيامًا قليلة، وبالمثل الزلازل، فمعظمها بضع دقائق في عُمْر الكرة الأرضية، الذي يُحصي بملايين السنين، وكذلك البراكين، وكذلك الحروب هي اضطرابات قصيرة في حياة الأمم بين فترات سلام طويلة.</p>
+                    </div>
+
+                    <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 space-y-4">
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            ثم إننا نَرَي بعض الخير في كل ذلك؛ فالمرض يعطي الجسم مناعة، والألم يربّي الإنسان على الصلابة والتحمل، والزلازل بديلة عن الضغط في داخل الكرة الأرضية، وتحمي قشرة الأرض من الانفجار، وتعيد الجبال إلى أماكنها، والبراكين تُخرِج المعادن والثروات من باطن الأرض، وتجعل تربة الأرض خصبة، والحروب تجمع الأمم مع بعضها في شكل تحالفات، وأعظم الاختراعات خَرَجت أثناء الحروب؛ البنسلين والذرة والصواريخ والطائرات النفاثة، كلها خَرَجت من الحروب، ومِن سُمِّ الثعبان يَخرج الدواء، ومن الميكروب نَصنع اللقاح.
+                        </p>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            إنَّ الشر هو الامتحان الذي نَعرف به أنفسنا، وهو الابتلاء الذي يحدد درجاتنا عند الله، ثم إنَّ الدنيا كلها عبارة عن فَصْل واحد من رواية سوف تَكثُر فصولها؛ فالموت ليس نهاية القصة، ولكن بدايتها، ولا يجوز أن نَحْكم على مسرحية من فَصْل واحد، ولا أن نَرفض كتابًا لأن الصفحة الأولى لم تعجبنا؛ فالحُكم هنا ناقص، ولا يُمْكن معرفة الحكمة كلها إلا في النهاية، ثم ما هو البديل الذي يتصوره السائل الذي يَسْخر من ذلك؟ هل يريد أن يعيش حياة بلا موت؟ بلا مرض وبلا شیخوخة، وبلا نقص ولا عَجْز، وبلا قيود وبلا أحزان وبلا آلام؟ هل يَطلب کمالًا مُطْلَقًا؟ يَطلب كما يشاء، ولكن الكمال المُطْلَق لله وحده.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 4 -->
+            <div class="topic-card bg-slate-900/90 border border-amber-500/20 rounded-2xl overflow-hidden card-glow" data-keywords="القرآن الدين لم تبلغه الدعوة القطبين زنجي الغابات الرسل الوحي">
+                <button onclick="toggleSection('topic-4')" class="w-full text-right p-5 sm:p-6 flex justify-between items-center bg-slate-800/60 hover:bg-slate-800 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 font-black flex items-center justify-center text-sm shadow-inner">٠٤</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-amber-200 amiri-font">ما ذنب الذي لم يَصِله القرآن والدِّين؟</h3>
+                    </div>
+                    <span id="icon-topic-4" class="text-amber-400 font-bold transform transition-transform duration-300">▼</span>
+                </button>
+                <div id="content-topic-4" class="p-6 sm:p-8 space-y-6 border-t border-slate-800 text-slate-200 leading-loose text-base sm:text-lg">
+                    <div class="bg-red-950/20 border-r-4 border-red-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-red-300 mb-2">شبهة من لم تبلغه الدعوة:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">يسأل ذلك الملحد في سخرية ويقول: ما رأيك في هذا الإنسان الذي لم يصل القرآن إليه، ولم يَنزل علیه کتاب، ولم يسمع عن أي نبي؟ ما ذنبه؟ وما مصيره عندكم يوم الحساب؟ مثل الناس في القطبين، أو زنجيّ في الغابات، ماذا يكون مصيره بين يدي إلهكم يوم القيامة؟</p>
+                    </div>
+
+                    <div class="bg-emerald-950/20 border-r-4 border-emerald-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-emerald-300 mb-2">كشف التناقض والرد العلمي:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">إن أعجب ما في سؤالك: أنك تتظاهر بالإيمان وبالرحمة والإشفاق على هذا الزنجي المسكين، الذي فاته ما في القرآن من نور ورحمة وهدى، مع أنَّك في الحقيقة كافر بالقرآن وبنوره ورحمته؛ فسؤالك فيه مخادعة، وفيه مناقَضة للنفس هي الوقاحة بعينها؛ فأنت تحاول أن تُقْنِعَنَا بحجة أنت لا تقتنع بها، ألا ترى أن جهاز المنطق عندك في حاجة إلى إصلاح؟</p>
+                    </div>
+
+                    <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 space-y-4">
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            إنَّ الرسل الذين جاء ذِكرهم في القرآن ليسوا كل الرسل، وإنما هناك آلاف غيرهم لا نَعلم عنهم شيئًا، والله يقول لنبيه: <span class="amiri-font text-amber-300 font-bold">"منهم من قَصَصْنا عليك ومنهم من لم نَقْصُص عليك"</span>، والله يوحِي إلى كل شيء حتّى النحل: <span class="amiri-font text-amber-300 font-bold">"وأوحى ربك إلى النحل أن اتخذي من الجبال بيوتًا ومن الشجر ومما يَعرُشون"</span>.
+                        </p>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            وقد يَكون الوحي كتابًا يُلقيه (جبريل)، وقد يلقيه الله في قَلْب العبد، وقد يَكون انشراحًا في الصدر، وقد يَكون حكمة، وقد يكون فَهمًا، وقد يَكون خشوعًا وتقوى، والذين يرق قلبهم وسمعهم، فهم يتلقّون فضل الله، أما الذين يغلقون آذانهم وقلوبهم؛ فلا تنفعهم كُتُبٌ ولا رُسُلٌ ولا معجزات حتى ولو كثرت، والله قال إنه يختص برحمته من يشاء، وإنه لا يُسأل عمّا يَفعل، وقد يعذّب الله فردًا أو يرحم آخر؛ لحكمة لا يعلمها إلا الله.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 5 -->
+            <div class="topic-card bg-slate-900/90 border border-amber-500/20 rounded-2xl overflow-hidden card-glow" data-keywords="الحج وثنية الكعبة رجم الشيطان الصفا المروة الفيزياء الأصغر والأكبر">
+                <button onclick="toggleSection('topic-5')" class="w-full text-right p-5 sm:p-6 flex justify-between items-center bg-slate-800/60 hover:bg-slate-800 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 font-black flex items-center justify-center text-sm shadow-inner">٠٥</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-amber-200 amiri-font">هل مناسك الحج وثنية؟</h3>
+                    </div>
+                    <span id="icon-topic-5" class="text-amber-400 font-bold transform transition-transform duration-300">▼</span>
+                </button>
+                <div id="content-topic-5" class="p-6 sm:p-8 space-y-6 border-t border-slate-800 text-slate-200 leading-loose text-base sm:text-lg">
+                    <div class="bg-red-950/20 border-r-4 border-red-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-red-300 mb-2">شبهة الملحد حول الحج:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">قال صاحبي الملحد: ألا تلاحِظ أنَّ مناسك الحج عندكم هي وثنية صريحة؟ ذلك البناء الحجري الذي تُسَمونه الكعبة وتتمسّحون به وتطوفون حوله، ورَجْم الشيطان، والهرولة بين الصفا والمروة، وتقبيل الحجر الأسود، وحكاية السبع طوفات والسبع رجمات والسبع هرولات، هي بقايا من خرافة الأرقام في الشعوذات القديمة، وثَوب الإحرام الذي تلبسونه على اللحم! ما الفائدة منه؟</p>
+                    </div>
+
+                    <div class="bg-emerald-950/20 border-r-4 border-emerald-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-emerald-300 mb-2">الرد العلمي والفلسفي:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">قلت في هدوء: ألا تلاحظ أنت أيضًا أنَّ في قوانين المادة التي دَرَستها أن الأصغر يطوف حول الأكبر؟ الإلكترون في الذرة يدور حول النواة، والقمر حول الأرض، والأرض حول الشمس، والشمس حول المجرَّة، والمجرة حول مجرة أكبر، إلى أن نَصل إلى الأكبر مُطلَقًا، وهو الله، ألا نقول "الله أكبر"؟ أي أَكبر من كل شيء، وأنت الآن تطوف حوله، ضمن مجموعتك الشمسية، ولا يمكنك أن تغيّر ذلك؛ فلا شيء ثابت في الكون إلا الله، هو الصمد الصامد الساكن والكل يتحرك حوله، وهذا هو قانون الأصغر والأكبر الذي تعلمْتَه في الفيزياء.</p>
+                    </div>
+
+                    <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 space-y-4">
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            أمَّا نحن فنطوف باختيارنا حول بيت الله، وهو أول بيت اتخذه الإنسان لعبادة الله؛ فأصبح رمزًا وبيتًا لله، وأنتم ألا تطوفون حول رجل محنَّط في الكرملين؟ تعظّمونه وتقولون إنه أفاد البشرية، ولو عرفتم قبر (شكسبير)؛ لتسابقتم إلى زيارته أكثر مما نتسابق إلى زيارة (محمد) - صلى الله عليه وسلم -، ألا تضعون باقة وَرْد على بعض الحجارة، وتقولون إنها ترمز للجندي المجهول؟ فلماذا تلوموننا لأننا نُلْقِي حَجَرًا على بعض الحجارة نقول إنها ترمز إلى الشيطان؟
+                        </p>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            إنَّ مناسك الحج هي عدة مناسبات لتحريك الفكر، وتنشيط المشاعر والتقوى في القلب، أما ثوب الإحرام الذي نلبسه على اللحم، ونشترط ألا يكون فيه خيط؛ فهو رمز للخروج من زينة الدنيا، تمامًا كما نأتي إلى الدنيا في اللفة، ونَخرج من الدنيا في لفة، وندخل القبر في لفة، ثُمَّ ألا تشترطون أنتم لبس (البدل) الرسمية لمقابلة المَلك؟ ونحن نقول: إنه لا شيء يليق بجلالة الله إلا خَلْع جميع الزينة؛ لأنه أعظم من جميع الملوك، وأنه لا يَصلح في الوقوف أمامه إلا التواضع التام، ولأنَّ هذا الثوب البسيط الذي يَلبسه الغني والفقير، أمام الله فيه معنى آخر للأُخوَّة، رغم اختلاف الدرجات والثروات. والحج اجتماع عظيم ومؤتمر سنوي، وصلاة الجمعة مثله، فهي المؤتمر الصغير الذي نَلتقي فيه كل أسبوع، وهي كلها معان جميلة لِمَن يُفكِّر ويتأمل، وهي بعيدة جدًّا عن الوثنية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 6 -->
+            <div class="topic-card bg-slate-900/90 border border-amber-500/20 rounded-2xl overflow-hidden card-glow" data-keywords="القرآن تأليف محمد صلى الله عليه وسلم الإعجاز اللغوي دقة الحروف">
+                <button onclick="toggleSection('topic-6')" class="w-full text-right p-5 sm:p-6 flex justify-between items-center bg-slate-800/60 hover:bg-slate-800 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 font-black flex items-center justify-center text-sm shadow-inner">٠٦</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-amber-200 amiri-font">هل القرآن مِن تأليف (محمد) صلى الله عليه وسلم؟</h3>
+                    </div>
+                    <span id="icon-topic-6" class="text-amber-400 font-bold transform transition-transform duration-300">▼</span>
+                </button>
+                <div id="content-topic-6" class="p-6 sm:p-8 space-y-6 border-t border-slate-800 text-slate-200 leading-loose text-base sm:text-lg">
+                    <div class="bg-red-950/20 border-r-4 border-red-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-red-300 mb-2">طرح الشبهة:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">يزعم بعض المشككين أن القرآن من تأليف النبي محمد صلى الله عليه وسلم، متخذين من ظروفه النفسية والبشرية مدخلاً للتشكيك في مصدر الوحي الإلهي.</p>
+                    </div>
+
+                    <div class="bg-emerald-950/20 border-r-4 border-emerald-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-emerald-300 mb-2">الرد العقدي والتاريخي:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">إذا نظَرنا إلى القرآن نظرة محايدة؛ فسوف نَستبعد تمامًا أنْ يكون (محمد) - صلى الله عليه وسلم - هو مؤلِّفه؛ لأنه لو كان مؤلِّفه؛ لظَهَرت فيه همومه وأحزانه، فقد رأيناه في عام واحد يَفقد زَوْجَه (خديجة) وعَمَّه (أبا طالب)، ولا سند له في الحياة غيرهما، وحزنه عليهما كبير، ومع ذلك، لا يذكرهما القرآن ولو بكلمة، وكذلك يموت ابنه (إبراهيم) ويبكي عليه الرسول - صلى الله عليه وسلم -، ولا يأتي خَبر بذلك في القرآن؛ فالقرآن معزول تمامًا عن شخصية الرسول.</p>
+                    </div>
+
+                    <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 space-y-4">
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            لو نظَرنا في العبارة القرآنية؛ لوجدنا أنها جديدة في صياغتها وتركيبها، وليس لها شبيه في أَدَب العرب السابق، ولا شبيه فيما أتى بعد ذلك؛ حتى تكاد اللغة تنقسم إلى شعر ونثر وقرآن؛ فنحن أمام كلام مميَّز، فالقرآن ليس شعرًا ولا نثرًا، وإذا نظرنا أكثر؛ فإنا سنكتشف الدقة العظيمة؛ فكل حرف في مكانه، لا تقديم ولا تأخير، ولا تستطيع أن تضع كلمة مكان كلمة، ولا حرفًا مکان حرف، كل لفظة تم اختيارها من مليون لفظة بمیزان دقیق، وهذه الدقة الكبيرة لا مثيل لها في التأليف.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 7 -->
+            <div class="topic-card bg-slate-900/90 border border-amber-500/20 rounded-2xl overflow-hidden card-glow" data-keywords="تناقضات في القرآن الكرسي العرش نملة سليمان العبودية لله">
+                <button onclick="toggleSection('topic-7')" class="w-full text-right p-5 sm:p-6 flex justify-between items-center bg-slate-800/60 hover:bg-slate-800 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 font-black flex items-center justify-center text-sm shadow-inner">٠٧</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-amber-200 amiri-font">تناقضات في القرآن!</h3>
+                    </div>
+                    <span id="icon-topic-7" class="text-amber-400 font-bold transform transition-transform duration-300">▼</span>
+                </button>
+                <div id="content-topic-7" class="p-6 sm:p-8 space-y-6 border-t border-slate-800 text-slate-200 leading-loose text-base sm:text-lg">
+                    <div class="bg-red-950/20 border-r-4 border-red-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-red-300 mb-2">شبهة الآيات والمتشابهات وقصص النمل:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">يقول الملحد ما معنى: "وسع كرسيه السماوات والأرض"؟ هل من المنطق أن يَكون هناك كرسي صفته هكذا؟ ولماذا تَتعجب من النملة التي تَكلمتْ في القرآن وحَذَّرتْ بقية النمل من قدوم (سليمان) وجيشه؟ "قالت نملة يا أيها النمل ادخلوا مساكنكم لا يَحْطِمَنَّكُم سليمان وجنوده"، كما يثيرون شبهة حول حاجة الله لعبادة خلقه.</p>
+                    </div>
+
+                    <div class="bg-emerald-950/20 border-r-4 border-emerald-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-emerald-300 mb-2">الرد العلمي والمنطقي:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">وسأرد عليه بنفس منطقه، وأسأله: لو قلتَ لي ما الإلكترون سأقول لك ما الكرسي؟ قل لي ما الكهرباء؟ قل لي ما الجاذبية؟ قل لي ما الزمان؟ إنك لا تعرف حقيقة أي شيء لتسالني ما الكرسي وما العرش؟ إن العالم مملوء بالأسرار وهذه بعض أسراره.</p>
+                    </div>
+
+                    <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 space-y-4">
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            ولو قرأتَ القليل عن عِلم الحشرات الآن؛ لَمَا سألت هذا السؤال، إنَّ عِلم الحشرات مليء بدراسات كثيرة عن لغة النمل ولغة النحل، ولغة النمل الآن حقيقة مؤكَّدة؛ ولا يمكنك أن تتعجب من أن نملة عَرَفت (سليمان)، ألم يعرف الإنسان الله؟
+                        </p>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            وقد يقول: هل الله محتاج إلى أنْ يعبده خَلْقُه؟ لكن يجب أن يَعرف أنَّ العبودية لله هی عَکْس العبودية في مفهومنا؛ فالعبودية في مفهومنا هي أن يأخذ السید الخير من العبد، أما العبودية لله فهي العكس تمامًا، وهي أن يعطِي السيد للعبْد نِعَمًا كثيرة؛ فحينما يقول الله: <span class="amiri-font text-amber-300 font-bold">"وما خَلقت الجن والإنس إلا ليعبدون"</span>؛ فمعناها: ما خَلَقتُ الجن والإنس إلا لِأعطيهم حبًا وخيرًا، وكرامة وعزة؛ فالسيد (الرب) لا يحتاج إلى عبادتنا، بل نحن المحتاجون إلى هذه العبادة والشرف، والمواهب والخيرات التي لا حدود لها؛ فالله الكريم سَمح لنا أن ندخل عليه في أي وقت بلا ميعاد.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 8 -->
+            <div class="topic-card bg-slate-900/90 border border-amber-500/20 rounded-2xl overflow-hidden card-glow" data-keywords="المعجزات مقبولة عقلا إبراهيم ذبح الولد موسى البحر البهائية الترانزستور">
+                <button onclick="toggleSection('topic-8')" class="w-full text-right p-5 sm:p-6 flex justify-between items-center bg-slate-800/60 hover:bg-slate-800 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 font-black flex items-center justify-center text-sm shadow-inner">٠٨</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-amber-200 amiri-font">هل المعجزات مقبولة عقلًا؟</h3>
+                    </div>
+                    <span id="icon-topic-8" class="text-amber-400 font-bold transform transition-transform duration-300">▼</span>
+                </button>
+                <div id="content-topic-8" class="p-6 sm:p-8 space-y-6 border-t border-slate-800 text-slate-200 leading-loose text-base sm:text-lg">
+                    <div class="bg-red-950/20 border-r-4 border-red-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-red-300 mb-2">شبهة المعجزات ورفضها:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">قال صاحبي الملحد: لا أفهم كيف يأمر هذا الرب نبيَّه الخليل المقرَّب (إبراهيم) بأن يَذبح ولده؟ ألا تَرَي أن هذه المسألة يصعب تصديقها؟ وينضم إليهم أصحاب الدانات الأخرى (كالبهائية) رافضين معجزات الأنبياء كشق البحر ودخول النار، معتبرين أن المعجزة خرق للقانون وتناقض مع العقل.</p>
+                    </div>
+
+                    <div class="bg-emerald-950/20 border-r-4 border-emerald-500 p-4 rounded-l-xl">
+                        <p class="font-bold text-emerald-300 mb-2">الرد العقدي والتحليلي:</p>
+                        <p class="text-slate-300 text-sm sm:text-base">نَرُد بأنَّ هذه القصة تدل على أن الله لم يكن يريد من (إبراهيم) أن يذبح ابنه، بدليل أن الذبح لم يَحدث، وإنما كان المراد أن يَذبح (إبراهيم) محبته الزائدة لابنه، وتعلقه الزائد بابنه؛ إذ لا يجوز أن يَكون في قَلْب النبي تعلقًا بغير الله، لا دنیا، ولا ولد، ولا مال، ولا سلطان، كل هذه الأمور لا يَصح أن يَتعلق بها قَلْب النبي.</p>
+                    </div>
+
+                    <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 space-y-4">
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            وقد فَهَم هؤلاء المعجزة وتصوروها خطأً؛ فالمعجزة في تَصَوِّرهم عَمَلٌ بهلواني وخَرْق للقانون، ولكن الحقيقة غير ذلك؛ فلو أنك عدت ثلاثة آلاف سنة إلى الوراء، ثم دخلت على فرعون (مصر) في ذلك الزمن، ومعك (ترانزستور) في حجم علبة الثقاب، يتكلم ويُغنِي من تلقاء نفسه، تُري ماذا سيكون حال (فرعون) وأعوانه؟ سيَهتفون في ذهول بلا شك: أنَّ هذه معجزة، وسِحر، ولا معقول، وخرْق لجميع القوانين.
+                        </p>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            وقع البهائيون والملحدون في نفس الغلطة؛ حينما رَفضوا المعجزات، وتصوروا أن قبولها فيه إهانة للعقل؛ فحاولوا تشويه معاني القرآن واعتبروا أن المعجزات هدم للنظام. والحق أننا نعيش في عصر لم تَعُدْ فيه المعجزات غريبة، فقد رأينا العِلم يأخذ بيدنا إلى سطح القمر، وإذا كان العلم البشري قد أعطانا كل هذه القوة؛ فلا شك أن العلم الإلهي أَقْدر وأعلم.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="w-full bg-slate-900 border-t border-amber-500/20 py-8 text-center text-slate-400 text-sm mt-16 px-4">
+        <div class="max-w-4xl mx-auto space-y-3">
+            <p class="amiri-font text-amber-300 text-lg font-bold">صُممت هذه الموسوعة الفكرية لنشر الحقائق وإقامة الحجة بالحكمة والموعظة الحسنة</p>
+            <p class="text-xs text-slate-500">مستوحاة من كتاب "حوار مع صديقي الملحد" للعلامة المفكر د. مصطفى محمود رحمه الله • جميع الحقوق محفوظة للنشر الإلكتروني © 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle individual section accordion
+        function toggleSection(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.style.display = 'none';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Expand all sections
+        function expandAll() {
+            for (let i = 1; i <= 8; i++) {
+                const content = document.getElementById('content-topic-' + i);
+                const icon = document.getElementById('icon-topic-' + i);
+                if (content) {
+                    content.style.display = 'block';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            }
+        }
+
+        // Collapse all sections
+        function collapseAll() {
+            for (let i = 1; i <= 8; i++) {
+                const content = document.getElementById('content-topic-' + i);
+                const icon = document.getElementById('icon-topic-' + i);
+                if (content) {
+                    content.style.display = 'none';
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
+        }
+
+        // Live search filter across topics
+        function filterContent() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.topic-card');
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                const keywords = card.getAttribute('data-keywords').toLowerCase();
+                
+                if (query === '' || text.includes(query) || keywords.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Initial setup on window load: Expand all sections for immediate reading
+        window.onload = function() {
+            expandAll();
+        };
+    </script>
+</body>
+</html>
+```
